@@ -36,14 +36,11 @@ class NetworkDataExtrack():
         
     def insert_data_mongodb(self,records,database,collection): 
         try: 
-            self.database = database 
-            self.collection = collection 
-            self.records = records 
-            self.mogo_client = pymongo.MongoClient(MONGO_DB_URL)
-            self.database = self.mogo_client[self.database]
-            self.collection=self.database[self.collection]
-            self.collection.insert_many(self.records)
-            return(len(self.records))
+            self.mongo_client = pymongo.MongoClient(MONGO_DB_URL)
+            db = self.mongo_client[database]
+            col = db[collection]
+            result = col.insert_many(records)
+            return (len(result.inserted_ids))
         except Exception as e: 
             raise NetworkSecurityException(e)
         

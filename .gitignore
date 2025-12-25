@@ -11,6 +11,6 @@ wheels/
 .env
 logs/
 .DS_Store
-
+Artifacts/
 
 

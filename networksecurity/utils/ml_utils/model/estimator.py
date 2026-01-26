@@ -21,5 +21,3 @@ class NetworkModel:
             return y_hat 
         except Exception as e: 
             raise NetworkSecurityException(e)
-        
-

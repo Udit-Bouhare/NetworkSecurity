@@ -93,5 +93,5 @@ def test_html(request: Request):
     )
 
 if __name__ == "__main__": 
-    app_run(app,host="localhost", port=8000)
+    app_run(app,host="0.0.0.0", port=8000)
 

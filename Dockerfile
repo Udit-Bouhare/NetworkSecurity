@@ -19,5 +19,6 @@ RUN uv sync --no-dev --no-install-project
 # Copy application code
 COPY . .
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uv", "run", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
+
 

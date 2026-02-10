@@ -78,7 +78,7 @@ jobs:
 
       - name: Pull latest image
         run: |
-            docker pull ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
+            025066256269.dkr.ecr.ap-south-1.amazonaws.com/networksecurity:latest
 
       - name: Stop old container
         run: |

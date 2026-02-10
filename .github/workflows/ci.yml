@@ -78,7 +78,7 @@ jobs:
 
       - name: Pull latest image
         run: |
-            025066256269.dkr.ecr.ap-south-1.amazonaws.com/networksecurity:latest
+            docker pull 025066256269.dkr.ecr.ap-south-1.amazonaws.com/networksecurity:latest
 
       - name: Stop old container
         run: |
